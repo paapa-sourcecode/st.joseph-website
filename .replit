@@ -15,15 +15,15 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "workflow.run"
-args = "Flask Server"
+args = "Production Flask Server"
 
 [[workflows.workflow]]
-name = "Flask Server"
+name = "Production Flask Server"
 author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "python app.py"
+args = "gunicorn -c gunicorn_config.py app:app"
 waitForPort = 5000
 
 [workflows.workflow.metadata]
@@ -32,10 +32,6 @@ outputType = "webview"
 [[ports]]
 localPort = 5000
 externalPort = 80
-
-[[ports]]
-localPort = 37127
-externalPort = 3000
 
 [deployment]
 deploymentTarget = "autoscale"
