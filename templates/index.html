@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Home - St. Joseph Careers{% endblock %}
+
+{% block content %}
+<div class="hero-section bg-primary text-white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1 class="display-4">Welcome to St. Joseph Careers</h1>
+                <p class="lead">Discover exciting career opportunities and join our mission to make a difference in people's lives.</p>
+                <a href="{{ url_for('careers') }}" class="btn btn-light btn-lg">View Open Positions</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Healthcare Careers</h5>
+                    <p class="card-text">Join our healthcare team and make a direct impact on patient care and community health.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Administrative Roles</h5>
+                    <p class="card-text">Support our mission with administrative and operational excellence behind the scenes.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Technology</h5>
+                    <p class="card-text">Help us innovate and improve our services through cutting-edge technology solutions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

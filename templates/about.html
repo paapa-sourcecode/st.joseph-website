@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}About - St. Joseph{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <h1 class="mb-4">About St. Joseph</h1>
+            
+            <p class="lead">St. Joseph is dedicated to serving our community with excellence, compassion, and integrity.</p>
+            
+            <h3 class="mt-5">Our Mission</h3>
+            <p>We are committed to providing exceptional services while fostering a supportive environment for both our team members and the community we serve.</p>
+            
+            <h3 class="mt-4">Our Values</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Excellence</h5>
+                    <p>We strive for the highest standards in everything we do.</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Compassion</h5>
+                    <p>We treat everyone with kindness and understanding.</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Integrity</h5>
+                    <p>We operate with honesty and transparency.</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Community</h5>
+                    <p>We are dedicated to serving and supporting our community.</p>
+                </div>
+            </div>
+            
+            <h3 class="mt-4">Join Our Team</h3>
+            <p>We're always looking for passionate individuals who share our values and want to make a positive impact. Explore our <a href="{{ url_for('careers') }}">career opportunities</a> to find your place with us.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
