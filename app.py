@@ -13,6 +13,11 @@ def home():
     return render_template('index.html')
 
 
+@app.route('/careers')
+def Careers():
+    return render_template('career.html')
+
+
 if __name__ == '__main__':
     # Use environment variables for configuration
     # Default to development settings for local testing
