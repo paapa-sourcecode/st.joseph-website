@@ -1,11 +1,11 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 import os
 
 app = Flask(__name__)
 
 # Configure Flask based on environment
 # Use environment variable to control debug mode (safer for production)
-app.config['DEBUG'] = os.environ.get('FLASK_DEBUG', 'False').lower() == 'true'
+app.config['DEBUG'] = os.environ.get('FLASK_DEBUG', 'True').lower() == 'true'
 
 
 @app.route('/')
@@ -14,7 +14,7 @@ def home():
 
 
 @app.route('/careers')
-def Careers():
+def careers():
     return render_template('career.html')
 
 
