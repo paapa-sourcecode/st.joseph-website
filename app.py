@@ -18,6 +18,11 @@ def careers():
     return render_template('career.html')
 
 
+@app.route('/school registration')
+def schreg():
+    return render_template('schreg.html')
+
+
 if __name__ == '__main__':
     # Use environment variables for configuration
     # Default to development settings for local testing
